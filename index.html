@@ -30,27 +30,27 @@
         }
         
         header {
-            padding: 25px 20px;
+            padding: 20px 15px;
             border-bottom: 1px solid #333;
             background-color: #0f0f0f;
         }
         
         h1 {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
             margin-bottom: 8px;
             color: #fff;
         }
         
         .subtitle {
-            font-size: 15px;
+            font-size: 14px;
             color: #aaa;
             margin-bottom: 15px;
         }
         
         .summary-box {
             background-color: #222;
-            padding: 18px;
+            padding: 15px;
             border-radius: 6px;
             margin-top: 15px;
             border-left: 4px solid #ff6b6b;
@@ -75,47 +75,8 @@
             margin-bottom: 6px;
         }
         
-        .download-all-section {
-            padding: 18px 20px;
-            border-bottom: 1px solid #333;
-            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
-        }
-        
-        .download-all-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background-color: #4dabf7;
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(77, 171, 247, 0.3);
-            width: 100%;
-            text-align: center;
-        }
-        
-        .download-all-btn:hover {
-            background-color: #339af0;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(77, 171, 247, 0.4);
-        }
-        
-        .download-info {
-            margin-top: 10px;
-            color: #aaa;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
         .timeline-overview {
-            padding: 25px 20px;
+            padding: 20px 15px;
             border-bottom: 1px solid #333;
         }
         
@@ -123,21 +84,18 @@
             font-size: 20px;
             color: #fff;
             margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
         
         .timeline-container {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 16px;
+            gap: 15px;
         }
         
         .timeline-card {
             background-color: #222;
             border-radius: 10px;
-            padding: 20px;
+            padding: 18px;
             border-top: 4px solid #4dabf7;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -191,7 +149,7 @@
         .status-support { background-color: #20c997; color: white; }
         
         .documents-section {
-            padding: 25px 20px;
+            padding: 20px 15px;
         }
         
         .section-header {
@@ -306,8 +264,80 @@
             text-decoration: underline;
         }
         
+        .download-all-section {
+            padding: 20px 15px;
+            border-bottom: 1px solid #333;
+            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+        }
+        
+        .download-all-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #4dabf7;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(77, 171, 247, 0.3);
+            width: 100%;
+            text-align: center;
+        }
+        
+        .download-all-btn:hover {
+            background-color: #339af0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(77, 171, 247, 0.4);
+        }
+        
+        .download-info {
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .contacts {
+            padding: 20px 15px;
+            text-align: center;
+            background-color: #111;
+            border-top: 1px solid #333;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #74c0fc;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 15px;
+            border-radius: 6px;
+            background-color: #222;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-link:hover {
+            background-color: #2a2a2a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
         footer {
-            padding: 18px 20px;
+            padding: 18px 15px;
             text-align: center;
             color: #777;
             font-size: 13px;
@@ -317,20 +347,14 @@
         
         @media (min-width: 481px) {
             body { padding: 15px; }
-            header, .download-all-section, .timeline-overview, .documents-section, footer { padding: 25px; }
+            header, .timeline-overview, .documents-section, .download-all-section, .contacts, footer { 
+                padding: 25px; 
+            }
             
             h1 { font-size: 26px; }
             .subtitle { font-size: 16px; }
             
             .summary-box { padding: 20px; }
-            .summary-box h3 { font-size: 17px; }
-            .summary-box ul { font-size: 15px; }
-            
-            .download-all-btn {
-                width: auto;
-                padding: 15px 25px;
-                font-size: 17px;
-            }
             
             .timeline-container {
                 grid-template-columns: repeat(2, 1fr);
@@ -338,8 +362,6 @@
             }
             
             .timeline-card { padding: 22px; }
-            .timeline-title { font-size: 17px; }
-            .timeline-description { font-size: 15px; }
             
             .doc-header {
                 flex-direction: row;
@@ -355,11 +377,17 @@
             .doc-number {
                 flex-shrink: 0;
             }
+            
+            .contact-links {
+                gap: 20px;
+            }
         }
         
         @media (min-width: 769px) {
             body { padding: 20px; }
-            header, .download-all-section, .timeline-overview, .documents-section, footer { padding: 30px 40px; }
+            header, .timeline-overview, .documents-section, .download-all-section, .contacts, footer { 
+                padding: 30px 40px; 
+            }
             
             h1 { font-size: 28px; }
             
@@ -384,7 +412,6 @@
             
             .doc-content {
                 flex: 1;
-                width: 100%;
             }
             
             .doc-content::before {
@@ -393,14 +420,35 @@
                 width: 12px;
                 height: 12px;
             }
+            
+            .download-all-btn {
+                width: auto;
+                padding: 15px 25px;
+                font-size: 17px;
+            }
         }
         
         @media (max-width: 350px) {
-            h1 { font-size: 22px; }
+            h1 { font-size: 20px; }
             .section-header h2, .timeline-overview h2 { font-size: 18px; }
             .timeline-title, .doc-title { font-size: 15px; }
             .timeline-description, .doc-summary { font-size: 13px; }
             .summary-box { padding: 15px; }
+            
+            .contact-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .contact-link {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) and (orientation: landscape) {
+            .timeline-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -416,23 +464,14 @@
                     <li>Дорога к деревне Боково не соответствует требованиям безопасности для запуска школьного автобуса и общественного транспорта</li>
                     <li>Для реконструкции требуется 200 млн рублей, которых нет в местном бюджете БГО</li>
                     <li>Администрация БГО направила ходатайство о выделении субсидии из областного дорожного фонда. Ходатайство поддержала Черноголовка, чьи школы посещают дети деревни Боково</li>
-                    <li>Министерство транспорта МО рассматривает запрос, но требует полный пакет документов от администрации</li>
+                    <li>Министерство транспорта МО информирует, что для выделения субсидии администрация БГО должна предоставить полный пакет документов</li>
                     <li>Министерство транспорта сообщает, что на 2026 год БГО уже выделено 361,48 млн рублей на ремонт и капитальный ремонт местных дорог</li>
                 </ul>
             </div>
         </header>
         
-        <section class="download-all-section">
-            <a href="https://disk.yandex.ru/d/9e5CTjAxTBKwww" target="_blank" class="download-all-btn">
-                <i class="fas fa-download"></i> Скачать все 18 документов
-            </a>
-            <div class="download-info">
-                <i class="fas fa-info-circle"></i> Архив содержит все документы по вопросу реконструкции дороги в Боково
-            </div>
-        </section>
-        
         <section class="timeline-overview">
-            <h2><i class="fas fa-stream"></i> Хронология основных событий</h2>
+            <h2>Хронология основных событий</h2>
             
             <div class="timeline-container">
                 <div class="timeline-card">
@@ -445,35 +484,35 @@
                 <div class="timeline-card">
                     <div class="timeline-date">Август 2025</div>
                     <div class="timeline-title"><i class="fas fa-file-invoice-dollar"></i> Подача ходатайства о субсидии</div>
-                    <div class="timeline-description">Администрация БГО направила ходатайство в Минтранс МО о выделении 200 млн рублей из областного дорожного фонда на реконструкцию дороги. Уполномоченный по правам ребенка обратился по вопросу школьного автобуса.</div>
+                    <div class="timeline-description">Администрация БГО направила ходатайство в Минтранс МО о выделении 200 млн рублей на реконструкцию дороги. Вопрос о школьном автобусе для детей Боково также был поднят Уполномоченным по правам ребенка.</div>
                     <span class="timeline-status status-action">Действие</span>
                 </div>
                 
                 <div class="timeline-card">
                     <div class="timeline-date">Сентябрь 2025</div>
                     <div class="timeline-title"><i class="fas fa-hourglass-half"></i> Рассмотрение ходатайства</div>
-                    <div class="timeline-description">Минтранс МО подтвердил получение ходатайства и начал его рассмотрение. Вопрос поставлен в повестку областной госпрограммы.</div>
+                    <div class="timeline-description">Минтранс МО подтвердил получение ходатайства и сообщил, что запрос находится на рассмотрении.</div>
                     <span class="timeline-status status-pending">На рассмотрении</span>
                 </div>
                 
                 <div class="timeline-card">
                     <div class="timeline-date">Октябрь 2025</div>
                     <div class="timeline-title"><i class="fas fa-handshake"></i> Поддержка ходатайства</div>
-                    <div class="timeline-description">Администрация Черноголовки поддержала запрос о выделении субсидии, так как дети из Боково посещают школы Черноголовки. Направлено обращение к Министру транспорта.</div>
+                    <div class="timeline-description">Администрация Черноголовки поддержала запрос о выделении субсидии, так как дети из Боково посещают школы Черноголовки. </div>
                     <span class="timeline-status status-support">Поддержка</span>
                 </div>
                 
                 <div class="timeline-card">
                     <div class="timeline-date">Ноябрь 2025</div>
                     <div class="timeline-title"><i class="fas fa-exclamation-circle"></i> Отсутствие средств в бюджете БГО</div>
-                    <div class="timeline-description">Администрация БГО повторно заявила, что средств на реконструкцию дороги в местном бюджете нет, и вопрос будет рассмотрен только при положительном решении Минтранса.</div>
+                    <div class="timeline-description">Администрация БГО заявила об отсутствии средств на реконструкцию дороги в местном бюджете на 2026 год. Финансирование проекта возможно только при положительном решении Минтранса МО о выделении субсидии.</div>
                     <span class="timeline-status status-info">Информация</span>
                 </div>
                 
                 <div class="timeline-card">
                     <div class="timeline-date">Декабрь 2025</div>
                     <div class="timeline-title"><i class="fas fa-tasks"></i> Требование документов и решение</div>
-                    <div class="timeline-description">Минтранс потребовал от администрации БГО предоставить полный пакет документов. Сообщил, что БГО на 2026 год уже выделено 361,48 млн рублей на ремонт и капремонт местных дорог.</div>
+                    <div class="timeline-description">Минтранс МО сообщил, что для рассмотрения вопроса о выделении субсидии администрация БГО должна предоставить необходимый пакет документов. Также Министерство сообщило, что на 2026 год БГО уже выделено 361,48 млн рублей на ремонт и капремонт местных дорог.</div>
                     <span class="timeline-status status-resolution">Решение</span>
                 </div>
             </div>
@@ -720,6 +759,26 @@
             </div>
         </section>
         
+        <section class="download-all-section">
+            <a href="https://disk.yandex.ru/d/9e5CTjAxTBKwww" target="_blank" class="download-all-btn">
+                <i class="fas fa-download"></i> Скачать все 18 документов
+            </a>
+            <div class="download-info">
+                <i class="fas fa-info-circle"></i> Архив содержит все документы по вопросу реконструкции дороги в Боково
+            </div>
+        </section>
+        
+        <div class="contacts">
+            <div class="contact-links">
+                <a href="mailto:popoffka88@ya.ru" class="contact-link">
+                    <i class="fas fa-envelope"></i> popoffka88@ya.ru
+                </a>
+                <a href="https://t.me/popoffka" target="_blank" class="contact-link">
+                    <i class="fab fa-telegram"></i> @popoffka
+                </a>
+            </div>
+        </div>
+        
         <footer>
             <p>Подборка документов по вопросу реконструкции дороги к деревне Боково</p>
             <p>Обновлено: 14.12.2025 | Всего документов: 18</p>
@@ -753,5 +812,17 @@
             });
         });
     </script>
+    
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105842694', 'ym');
+
+        ym(105842694, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105842694" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </body>
 </html>

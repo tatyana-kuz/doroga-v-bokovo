@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дорога в Боково: подборка документов</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+        
+        body {
+            background-color: #000;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            padding: 25px 20px;
+            border-bottom: 1px solid #333;
+            background-color: #0f0f0f;
+        }
+        
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        
+        .subtitle {
+            font-size: 15px;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+        
+        .summary-box {
+            background-color: #222;
+            padding: 18px;
+            border-radius: 6px;
+            margin-top: 15px;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .summary-box h3 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+        }
+        
+        .summary-box ul {
+            padding-left: 18px;
+            color: #ccc;
+            font-size: 14px;
+        }
+        
+        .summary-box li {
+            margin-bottom: 6px;
+        }
+        
+        .download-all-section {
+            padding: 18px 20px;
+            border-bottom: 1px solid #333;
+            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+        }
+        
+        .download-all-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #4dabf7;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(77, 171, 247, 0.3);
+            width: 100%;
+            text-align: center;
+        }
+        
+        .download-all-btn:hover {
+            background-color: #339af0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(77, 171, 247, 0.4);
+        }
+        
+        .download-info {
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .timeline-overview {
+            padding: 25px 20px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .timeline-overview h2 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .timeline-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        
+        .timeline-card {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+            border-top: 4px solid #4dabf7;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .timeline-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .timeline-date {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: #4dabf7;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .timeline-title {
+            font-weight: 600;
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .timeline-description {
+            color: #ccc;
+            font-size: 14px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .timeline-status {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .status-problem { background-color: #ff6b6b; color: white; }
+        .status-action { background-color: #51cf66; color: white; }
+        .status-pending { background-color: #ff922b; color: white; }
+        .status-info { background-color: #4dabf7; color: white; }
+        .status-resolution { background-color: #9775fa; color: white; }
+        .status-support { background-color: #20c997; color: white; }
+        
+        .documents-section {
+            padding: 25px 20px;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .section-header h2 {
+            font-size: 20px;
+            color: #fff;
+        }
+        
+        .doc-count {
+            background-color: #444;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .doc-item {
+            margin-bottom: 20px;
+        }
+        
+        .doc-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .doc-date {
+            font-weight: 600;
+            color: #aaa;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .doc-content {
+            background-color: #222;
+            border-radius: 6px;
+            padding: 18px;
+            border-left: 3px solid #4dabf7;
+            position: relative;
+        }
+        
+        .doc-content::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #4dabf7;
+            left: -6px;
+            top: 23px;
+        }
+        
+        .doc-header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        
+        .doc-title {
+            font-weight: 600;
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .doc-number {
+            background-color: #333;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #ccc;
+            display: inline-block;
+            width: fit-content;
+        }
+        
+        .doc-org {
+            color: #4dabf7;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+        }
+        
+        .doc-summary {
+            color: #ccc;
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .doc-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #74c0fc;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .doc-link:hover {
+            color: #a5d8ff;
+            text-decoration: underline;
+        }
+        
+        footer {
+            padding: 18px 20px;
+            text-align: center;
+            color: #777;
+            font-size: 13px;
+            border-top: 1px solid #333;
+            background-color: #0f0f0f;
+        }
+        
+        @media (min-width: 481px) {
+            body { padding: 15px; }
+            header, .download-all-section, .timeline-overview, .documents-section, footer { padding: 25px; }
+            
+            h1 { font-size: 26px; }
+            .subtitle { font-size: 16px; }
+            
+            .summary-box { padding: 20px; }
+            .summary-box h3 { font-size: 17px; }
+            .summary-box ul { font-size: 15px; }
+            
+            .download-all-btn {
+                width: auto;
+                padding: 15px 25px;
+                font-size: 17px;
+            }
+            
+            .timeline-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .timeline-card { padding: 22px; }
+            .timeline-title { font-size: 17px; }
+            .timeline-description { font-size: 15px; }
+            
+            .doc-header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            
+            .doc-title {
+                margin-bottom: 0;
+                margin-right: 10px;
+            }
+            
+            .doc-number {
+                flex-shrink: 0;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            body { padding: 20px; }
+            header, .download-all-section, .timeline-overview, .documents-section, footer { padding: 30px 40px; }
+            
+            h1 { font-size: 28px; }
+            
+            .timeline-container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+            
+            .timeline-card { padding: 25px; }
+            
+            .doc-item {
+                display: flex;
+                margin-bottom: 25px;
+            }
+            
+            .doc-date {
+                min-width: 120px;
+                margin-bottom: 0;
+                margin-right: 20px;
+                padding-top: 5px;
+            }
+            
+            .doc-content {
+                flex: 1;
+                width: 100%;
+            }
+            
+            .doc-content::before {
+                left: -8px;
+                top: 25px;
+                width: 12px;
+                height: 12px;
+            }
+        }
+        
+        @media (max-width: 350px) {
+            h1 { font-size: 22px; }
+            .section-header h2, .timeline-overview h2 { font-size: 18px; }
+            .timeline-title, .doc-title { font-size: 15px; }
+            .timeline-description, .doc-summary { font-size: 13px; }
+            .summary-box { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Дорога в Боково: подборка документов</h1>
+            <div class="subtitle">Хронология событий по вопросу реконструкции дороги к деревне Боково</div>
+            
+            <div class="summary-box">
+                <h3><i class="fas fa-exclamation-triangle"></i> Краткая суть проблемы</h3>
+                <ul>
+                    <li>Дорога к деревне Боково не соответствует требованиям безопасности для запуска школьного автобуса и общественного транспорта</li>
+                    <li>Для реконструкции требуется 200 млн рублей, которых нет в местном бюджете БГО</li>
+                    <li>Администрация БГО направила ходатайство о выделении субсидии из областного дорожного фонда. Ходатайство поддержала Черноголовка, чьи школы посещают дети деревни Боково</li>
+                    <li>Министерство транспорта МО рассматривает запрос, но требует полный пакет документов от администрации</li>
+                    <li>Министерство транспорта сообщает, что на 2026 год БГО уже выделено 361,48 млн рублей на ремонт и капитальный ремонт местных дорог</li>
+                </ul>
+            </div>
+        </header>
+        
+        <section class="download-all-section">
+            <a href="https://disk.yandex.ru/d/9e5CTjAxTBKwww" target="_blank" class="download-all-btn">
+                <i class="fas fa-download"></i> Скачать все 18 документов
+            </a>
+            <div class="download-info">
+                <i class="fas fa-info-circle"></i> Архив содержит все документы по вопросу реконструкции дороги в Боково
+            </div>
+        </section>
+        
+        <section class="timeline-overview">
+            <h2><i class="fas fa-stream"></i> Хронология основных событий</h2>
+            
+            <div class="timeline-container">
+                <div class="timeline-card">
+                    <div class="timeline-date">Июль 2025</div>
+                    <div class="timeline-title"><i class="fas fa-road"></i> Выявлена проблема с дорогой</div>
+                    <div class="timeline-description">После выездной встречи с жителями администрация БГО официально подтвердила, что дорога к деревне Боково не соответствует требованиям безопасности. Запуск школьного автобуса и общественного транспорта невозможен.</div>
+                    <span class="timeline-status status-problem">Проблема</span>
+                </div>
+                
+                <div class="timeline-card">
+                    <div class="timeline-date">Август 2025</div>
+                    <div class="timeline-title"><i class="fas fa-file-invoice-dollar"></i> Подача ходатайства о субсидии</div>
+                    <div class="timeline-description">Администрация БГО направила ходатайство в Минтранс МО о выделении 200 млн рублей из областного дорожного фонда на реконструкцию дороги. Уполномоченный по правам ребенка обратился по вопросу школьного автобуса.</div>
+                    <span class="timeline-status status-action">Действие</span>
+                </div>
+                
+                <div class="timeline-card">
+                    <div class="timeline-date">Сентябрь 2025</div>
+                    <div class="timeline-title"><i class="fas fa-hourglass-half"></i> Рассмотрение ходатайства</div>
+                    <div class="timeline-description">Минтранс МО подтвердил получение ходатайства и начал его рассмотрение. Вопрос поставлен в повестку областной госпрограммы.</div>
+                    <span class="timeline-status status-pending">На рассмотрении</span>
+                </div>
+                
+                <div class="timeline-card">
+                    <div class="timeline-date">Октябрь 2025</div>
+                    <div class="timeline-title"><i class="fas fa-handshake"></i> Поддержка ходатайства</div>
+                    <div class="timeline-description">Администрация Черноголовки поддержала запрос о выделении субсидии, так как дети из Боково посещают школы Черноголовки. Направлено обращение к Министру транспорта.</div>
+                    <span class="timeline-status status-support">Поддержка</span>
+                </div>
+                
+                <div class="timeline-card">
+                    <div class="timeline-date">Ноябрь 2025</div>
+                    <div class="timeline-title"><i class="fas fa-exclamation-circle"></i> Отсутствие средств в бюджете БГО</div>
+                    <div class="timeline-description">Администрация БГО повторно заявила, что средств на реконструкцию дороги в местном бюджете нет, и вопрос будет рассмотрен только при положительном решении Минтранса.</div>
+                    <span class="timeline-status status-info">Информация</span>
+                </div>
+                
+                <div class="timeline-card">
+                    <div class="timeline-date">Декабрь 2025</div>
+                    <div class="timeline-title"><i class="fas fa-tasks"></i> Требование документов и решение</div>
+                    <div class="timeline-description">Минтранс потребовал от администрации БГО предоставить полный пакет документов. Сообщил, что БГО на 2026 год уже выделено 361,48 млн рублей на ремонт и капремонт местных дорог.</div>
+                    <span class="timeline-status status-resolution">Решение</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="documents-section">
+            <div class="section-header">
+                <h2>Подробный список всех документов</h2>
+                <div class="doc-count">18 документов</div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">30.07.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Протокол по итогам выездной встречи с жителями</div>
+                        <div class="doc-number">102-01Сз-6910</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-building"></i> Администрация БГО</div>
+                    <div class="doc-summary">Протокол по итогам выездной встречи с жителями 24.07.2025, в котором прописаны конкретные шаги и сроки.</div>
+                    <a href="https://disk.yandex.ru/i/mZyNqx1_St0zvw" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">30.07.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Подтверждение необходимости обустройства дороги</div>
+                        <div class="doc-number">102-01ТГ-6305</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-building"></i> Администрация БГО</div>
+                    <div class="doc-summary">Официально подтверждается необходимость обустройства дороги и сроки проработки мер.</div>
+                    <a href="https://disk.yandex.ru/i/igeGpONsZptQ-A" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">27.08.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Ходатайство о выделении субсидии 200 млн руб</div>
+                        <div class="doc-number">102-01ТГ-7161</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-building"></i> Администрация БГО</div>
+                    <div class="doc-summary">Администрация БГО ходатайствует перед Минтрансом МО о выделении субсидии в размере 200 млн руб из областного дорожного фонда на реконструкцию дороги к д. Боково.</div>
+                    <a href="https://disk.yandex.ru/i/hFJ62sehVu0Lbg" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">29.08.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Обращение по организации школьного автобуса</div>
+                        <div class="doc-number">ТГ-6623</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-child"></i> Уполномоченный по правам ребенка МО</div>
+                    <div class="doc-summary">О направлении обращения в администрацию БГО для содействия в организации школьного автобуса для детей д.Боково.</div>
+                    <a href="https://disk.yandex.ru/i/ZwkFWvERExAxRg" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">05.09.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Запуск школьного автобуса невозможен</div>
+                        <div class="doc-number">102-01ТГ-7408</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-building"></i> Администрация БГО</div>
+                    <div class="doc-summary">Запуск школьного автобуса в деревню Боково невозможен из-за несоответствия дороги требованиям безопасности.</div>
+                    <a href="https://disk.yandex.ru/i/hzAiXQUpVstipQ" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">09.09.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Подтверждение муниципальной собственности дорог</div>
+                        <div class="doc-number">102-01ТГ-7454</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-building"></i> Администрация БГО</div>
+                    <div class="doc-summary">Администрация подтверждает, что дороги в Боково являются муниципальной собственностью, но не соответствуют требованиям для запуска школьного автобуса.</div>
+                    <a href="https://disk.yandex.ru/i/9KcygaazGPTQ0g" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">09.09.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Результаты обследования с ГИБДД</div>
+                        <div class="doc-number">№ 102-01ТГ-7481</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-building"></i> Администрация БГО</div>
+                    <div class="doc-summary">По результатам совместного обследования с ГИБДД дорога к деревне Боково не соответствует требованиям безопасности для школьного автобуса.</div>
+                    <a href="https://disk.yandex.ru/i/RWrVbhYH07e_uA" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">24.09.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Подтверждение получения ходатайства</div>
+                        <div class="doc-number">№ 74-23920-2025-ОТ</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-truck-moving"></i> Минтранс МО</div>
+                    <div class="doc-summary">Министерство подтверждает, что получило ходатайство администрации Богородского округа о выделении субсидии на реконструкцию дороги к Боково.</div>
+                    <a href="https://disk.yandex.ru/i/eNRkrk-H5g3ioQ" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">24.10.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Запрос находится на рассмотрении</div>
+                        <div class="doc-number">№ 74-33090-2025-ОТ</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-truck-moving"></i> Минтранс МО</div>
+                    <div class="doc-summary">Министерство сообщает, что запрос администрации о субсидии на реконструкцию дороги к Боково находится на рассмотрении.</div>
+                    <a href="https://disk.yandex.ru/i/Q9Z5E7G_ULE3Uw" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">27.10.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Запрос информации о ходе рассмотрения</div>
+                        <div class="doc-number">ТГ-8467/AЦ</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-child"></i> Уполномоченный по правам ребенка МО</div>
+                    <div class="doc-summary">Уполномоченный запросил в Министерстве транспорта информацию о ходе рассмотрения ходатайства о субсидии на дорогу в Боково.</div>
+                    <a href="https://disk.yandex.ru/i/w9KlDGsb6jsPbg" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">27.10.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Обращение к Министру транспорта</div>
+                        <div class="doc-number">15/ИСХ-1504/2025</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-city"></i> Администрация Черноголовки</div>
+                    <div class="doc-summary">Администрация Черноголовки обратилась к Министру транспорта области с просьбой выделить субсидию из дорожного фонда на реконструкцию дороги в деревне Боково.</div>
+                    <a href="https://disk.yandex.ru/i/u0iFWREx-H4leQ" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">30.10.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Отсутствие средств в бюджете БГО</div>
+                        <div class="doc-number">№ 133-53540-2025-ОТ</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-building"></i> Администрация БГО</div>
+                    <div class="doc-summary">БГО сообщает, что денег на реконструкцию дороги к д. Боково в бюджете нет, и вернётся к рассмотрению этого вопроса только в случае положительного решения Минтранса.</div>
+                    <a href="https://disk.yandex.ru/i/HLI6EbYR-vrA5w" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">11.11.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Повторное подтверждение отсутствия средств</div>
+                        <div class="doc-number">№ 133-56373-2025-ОТ</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-building"></i> Администрация БГО</div>
+                    <div class="doc-summary">Это письмо является практически копией предыдущего. Администрация БГО ещё раз заявляет, что денег на реконструкцию дороги к Боково в бюджете нет.</div>
+                    <a href="https://disk.yandex.ru/i/S7oz68J8SCPnCg" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">01.12.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Информация о ходе рассмотрения</div>
+                        <div class="doc-number">ТГ-9464/AЦ</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-child"></i> Уполномоченный по правам ребенка МО</div>
+                    <div class="doc-summary">Уполномоченный по правам ребёнка информирует, что запрос администрации Богородского округа о выделении субсидии на реконструкцию дороги находится на рассмотрении в Министерстве транспорта.</div>
+                    <a href="https://disk.yandex.ru/i/mFipSfiOsDZoPA" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">08.12.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Требование полного пакета документов</div>
+                        <div class="doc-number">22ТГ-35407</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-truck-moving"></i> Минтранс МО</div>
+                    <div class="doc-summary">Для включения реконструкции дороги в Боково в областную программу администрация должна самостоятельно разработать и подать полный пакет документов (проект планировки, обоснования, расчёты), который до сих пор не представлен.</div>
+                    <a href="https://disk.yandex.ru/i/b51xBrUZpW2XmA" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">11.12.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Повторный запрос средств</div>
+                        <div class="doc-number">№ 1-76678-2025-ОТ</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-building"></i> Администрация БГО</div>
+                    <div class="doc-summary">БГО снова заявляет, что у них нет денег на реконструкцию дороги. Они вернутся к вопросу только если Минтранс выделит субсидию в 2026 году.</div>
+                    <a href="https://disk.yandex.ru/i/JgdSrvdpNUA7IA" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">12.12.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Выделение средств на местные дороги</div>
+                        <div class="doc-number">№ 74-53313-2025-ОТ</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-truck-moving"></i> Минтранс МО</div>
+                    <div class="doc-summary">Министерство транспорта сообщает, что на ремонт и капремонт местных дорог Богородскому округу уже предусмотрено 361,48 млн рублей на 2026 год.</div>
+                    <a href="https://disk.yandex.ru/i/q43TQQP_s-CS7g" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+            
+            <div class="doc-item">
+                <div class="doc-date">12.12.2025</div>
+                <div class="doc-content">
+                    <div class="doc-header">
+                        <div class="doc-title">Повторное сообщение о выделении средств</div>
+                        <div class="doc-number">№ 74-76152-2025-ОТ</div>
+                    </div>
+                    <div class="doc-org"><i class="fas fa-truck-moving"></i> Минтранс МО</div>
+                    <div class="doc-summary">Это письмо – полная копия предыдущего ответа Министерства, но без указания конкретной суммы в 361,48 млн рублей.</div>
+                    <a href="https://disk.yandex.ru/i/FlZmsZJdjpGakA" target="_blank" class="doc-link"><i class="fas fa-external-link-alt"></i> Ссылка на документ</a>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Подборка документов по вопросу реконструкции дороги к деревне Боково</p>
+            <p>Обновлено: 14.12.2025 | Всего документов: 18</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineCards = document.querySelectorAll('.timeline-card');
+            timelineCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+            
+            const docItems = document.querySelectorAll('.doc-item');
+            docItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, timelineCards.length * 200 + index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
